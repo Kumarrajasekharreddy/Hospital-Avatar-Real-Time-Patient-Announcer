@@ -53,3 +53,5 @@ An AI-powered virtual assistant that delivers real-time hospital discharge updat
 > ✅ **Admin-Friendly**: Reduces manual checks → saves time  
 > ✅ **Voice + Visual**: Dual-mode updates for noisy/quiet environments  
 > ️ **Customizable**: Change avatar style, voice, or language easily
+
+---
