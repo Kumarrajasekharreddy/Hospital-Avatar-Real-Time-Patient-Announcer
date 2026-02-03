@@ -15,11 +15,12 @@ An AI-powered virtual assistant that delivers real-time hospital discharge updat
 
 ## 🖼️ Screenshots
 
-### 1. Avatar Girl Delivering Discharge Update
+### 1. Avatar Girl Delivering Admit&Discharge Update
 
-[![Avatar Discharge](https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/avatar-discharge.png)](https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/avatar-discharge.png)  
-*Friendly avatar speaks: “Patient Rajesh Kumar is ready for discharge from Room 305.”*
-
+https://github.com/Kumarrajasekharreddy/Hospital-Avatar-Real-Time-Patient-Announcer/blob/main/Avatar%20Announce.jpg 
+- Friendly AI avatar announces:  
+  _“Patient [Name] has been admitted/discharged. UHID: [ID]. Doctor: [Name].”_  
+- Real-time voice pop-ups for hospital staff
 ### 2. Admin Dashboard with Avatar Integration
 
 [![Admin View](https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/admin-dashboard.png)](https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/admin-dashboard.png)  
