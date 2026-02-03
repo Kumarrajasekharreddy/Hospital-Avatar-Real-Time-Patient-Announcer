@@ -24,7 +24,6 @@ An AI-powered virtual assistant that deliverslive admission & discharge updates*
 
 
 ### 2. Voice + Text Sync   
-(https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/voice-sync.png?raw=true)](https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/voice-sync.png)  
 *Converts UHID to speakable format (e.g., A.I.M.S.000123 → “A dot I dot M dot S dot zero zero zero one two three”)
 Ensures clear, natural voice output for staff.
 *
