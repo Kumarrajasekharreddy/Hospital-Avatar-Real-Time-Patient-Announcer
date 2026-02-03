@@ -1,58 +1,49 @@
-# 👧 Apollo Avatar Assistant: Admin & Discharge Updates
+#  Apollo Avatar Assistant: Real-Time Patient Announcer
 
-An AI-powered virtual assistant that delivers real-time hospital discharge updates and admin alerts through a friendly animated avatar.
+An AI-powered virtual assistant that deliverslive admission & discharge updates** from hospital systems using a friendly animated avatar.
 
 ---
 
 ## 🎯 What It Does
 
-- Displays live patient discharge status using a **talking avatar girl**
-- Notifies admin staff about pending discharges, delays, or approvals
-- Provides voice + visual updates without manual checking
-- Built for Apollo Hospitals (simulated environment)
+- Fetches real-time patient events (admitted/discharge) from hospital DB  
+- Announces via **voice + on-screen text** using a talking avatar girl  
+- Auto-refreshes every 15 seconds — no manual checks needed  
+- Built for internal use at Apollo Hospitals (demo uses **simulated data only**)
 
 ---
 
 ## 🖼️ Screenshots
 
-### 1. Avatar Girl Delivering Admit&Discharge Update
+### 1. Avatar Delivering Admit/Discharge Update  
+![Avatar Announce](https://github.com/Kumarrajasekharreddy/Hospital-Avatar-Real-Time-Patient-Announcer/blob/main/Avatar%20Announce.jpg?raw=true)  
+*Friendly avatar speaks:*  
+> **“Patient TEST PATIENT A has been discharged. UHID: TEST.A123456. Doctor: DR. AVATAR.”**  
+*(All data is synthetic — for demo only)*
 
-https://github.com/Kumarrajasekharreddy/Hospital-Avatar-Real-Time-Patient-Announcer/blob/main/Avatar%20Announce.jpg 
-- Friendly AI avatar announces:  
-  _“Patient [Name] has been admitted/discharged. UHID: [ID]. Doctor: [Name].”_  
-- Real-time voice pop-ups for hospital staff
-### 2. Admin Dashboard with Avatar Integration
 
-[![Admin View](https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/admin-dashboard.png)](https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/admin-dashboard.png)  
-*Real-time alerts with avatar animation + text summary*
 
-### 3. Voice + Text Synchronization
-
-[![Voice Sync](https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/voice-sync.png)](https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/voice-sync.png)  
-*Avatar lip-syncs with speech → professional & engaging*
-
----
+### 2. Voice + Text Sync   
+(https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/voice-sync.png?raw=true)](https://github.com/Kumarrajasekharreddy/Avatar-Assistant/blob/main/screenshots/voice-sync.png)  
+*Converts UHID to speakable format (e.g., A.I.M.S.000123 → “A dot I dot M dot S dot zero zero zero one two three”)
+Ensures clear, natural voice output for staff.
+*
 
 ## 🛠️ Software & Tools Used
 
-| Category        | Tools & Technologies |
-|-----------------|----------------------|
-| **Core**        | Python, Flask        |
-| **Avatar Engine**| PyGame / Custom Animation / Responsive HTML5 Canvas |
-| **Voice**       | pyttsx3 / gTTS (Text-to-Speech) |
-| **Frontend**    | HTML, CSS, JavaScript |
-| **Backend**     | Flask REST API       |
-| **Data Source** | Hospital DB (simulated via JSON/CSV) |
-| **Deployment**  | Local server (`localhost:5000`) |
+| Category          | Tools & Technologies |
+|-----------------  |----------------------|
+| **Core**          | Python, Pandas       |
+| **Avatar Engine** |HeyGen + NVIDIA Omniverse (AI-generated talking avatar) |
+| **Voice**         | Browser TTS (real-time synthesis) |
+| **DB**            | PostgreSQL (`psycopg2`) |
+| **Data Source**   | Simulated hospital DB (Apollo schema) |
 
 ---
 
-## 💡 Key Features
+## 💻 Core Logic 
 
-> ✅ **Real-Time Discharge Alerts**: Avatar auto-speaks when discharge is ready  
-> ✅ **Human-Like Interaction**: Animated face with eye movement & lip sync  
-> ✅ **Admin-Friendly**: Reduces manual checks → saves time  
-> ✅ **Voice + Visual**: Dual-mode updates for noisy/quiet environments  
-> ️ **Customizable**: Change avatar style, voice, or language easily
-
----
+From `update_avatar()`:
+```python
+uhid_spoken = ' '.join(list(uhid.upper().replace('.', ' dot ')))
+voice_text = f"Patient {status}, {name}, U H I D {uhid_spoken}, under Doctor {doctor}."
